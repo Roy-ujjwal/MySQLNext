@@ -1,11 +1,6 @@
 import Head from "next/head";
 import { Layout } from "antd";
 import { Menu } from "antd";
-import {
-  MailOutlined,
-  AppstoreOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
 const { Header, Footer, Sider, Content } = Layout;
 
 export default function Home() {
@@ -17,43 +12,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <Header>
-          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["mail"]}>
-            <Menu.Item key="mail" icon={<MailOutlined />}>
-              Navigation One
-            </Menu.Item>
-            <Menu.SubMenu
-              key="SubMenu"
-              title="Navigation Two - Submenu"
-              icon={<SettingOutlined />}
-            >
-              <Menu.Item key="two" icon={<AppstoreOutlined />}>
-                Navigation Two
-              </Menu.Item>
-              <Menu.Item key="three" icon={<AppstoreOutlined />}>
-                Navigation Three
-              </Menu.Item>
-              <Menu.ItemGroup title="Item Group">
-                <Menu.Item key="four" icon={<AppstoreOutlined />}>
-                  Navigation Four
-                </Menu.Item>
-                <Menu.Item key="five" icon={<AppstoreOutlined />}>
-                  Navigation Five
-                </Menu.Item>
-              </Menu.ItemGroup>
-            </Menu.SubMenu>
-          </Menu>
-        </Header>
-        <Content>
-          Vivamus quis mi. Phasellus a est. Phasellus magna. In hac habitasse
-          platea dictumst. Curabitur at lacus ac velit ornare lobortis.
-          Curabitur a felis in nunc fringilla tristique. Morbi mattis
-          ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem.
-          Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec,
-          quam. Sed hendrerit. Morbi ac felis.{" "}
-        </Content>
-        <Footer>Footer</Footer>
+    <Header className="header">
+      <div className="logo" />
+      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']} items={items1} />
+    </Header>
+    <Content style={{ padding: '0 50px' }}>
+      <Breadcrumb style={{ margin: '16px 0' }}>
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <Breadcrumb.Item>List</Breadcrumb.Item>
+        <Breadcrumb.Item>App</Breadcrumb.Item>
+      </Breadcrumb>
+      <Layout className="site-layout-background" style={{ padding: '24px 0' }}>
+        <Sider className="site-layout-background" width={200}>
+          <Menu
+            mode="inline"
+            defaultSelectedKeys={['1']}
+            defaultOpenKeys={['sub1']}
+            style={{ height: '100%' }}
+            items={items2}
+          />
+        </Sider>
+        <Content style={{ padding: '0 24px', minHeight: 280 }}>Content</Content>
       </Layout>
+    </Content>
+    <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+  </Layout>
     </div>
   );
 }
