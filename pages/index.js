@@ -21,7 +21,7 @@ export default function Home() {
       children: [{ label: 'item 3', key: 'submenu-item-1' }],
     },
   ];
-  
+
   return (
     <div>
       <Head>
@@ -49,6 +49,12 @@ export default function Home() {
             className="site-layout-background"
             style={{ padding: "24px 0" }}
           >
+            <div>
+      <Avatar size={64} icon={<UserOutlined />} />
+      <Avatar size="large" icon={<UserOutlined />} />
+      <Avatar icon={<UserOutlined />} />
+      <Avatar size="small" icon={<UserOutlined />} />
+    </div>
             <Sider className="site-layout-background" width={200}>
               <Menu
                 mode="inline"
