@@ -117,16 +117,7 @@ export default function Home() {
                   <Checkbox>Remember me</Checkbox>
                 </Form.Item>
 
-                <Form.Item
-                  wrapperCol={{
-                    offset: 8,
-                    span: 16,
-                  }}
-                >
-                  <Button type="primary" htmlType="submit">
-                    Submit
-                  </Button>
-                </Form.Item>
+                
               </Form>
               lorem5000: functions that return strings that can be used to
               display the password fields in the password fields fields field
