@@ -65,34 +65,6 @@ export default function Home() {
               />
             </Sider>
             <Content style={{ padding: "0 24px", minHeight: 280 }}>
-              <Form
-                name="basic"
-                labelCol={{
-                  span: 8,
-                }}
-                wrapperCol={{
-                  span: 16,
-                }}
-                initialValues={{
-                  remember: true,
-                }}
-                onFinish={onFinish}
-                onFinishFailed={onFinishFailed}
-                autoComplete="off"
-              >
-                <Form.Item
-                  label="Password"
-                  name="password"
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input your password!",
-                    },
-                  ]}
-                >
-                  <Input.Password />
-                </Form.Item>               
-              </Form>
               lorem5000: functions that return strings that can be used to
               display the password fields in the password fields fields field
               <Dropdown key="more" overlay={menu} placement="bottomRight">
